@@ -1,4 +1,4 @@
-FROM phpopendocs_php_fpm:latest
+FROM blankopendocs_php_fpm:latest
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
   php7.4-xdebug valgrind strace
