@@ -15,7 +15,14 @@ jobs:
     name: Code Style Analysis
     runs-on: ubuntu-latest
     steps:
+      - name: Set status pending
+        uses: ouzi-dev/commit-status-updater@v1.1.0
       - name: Checkout
         uses: actions/checkout@master
       - name: Analyze code style
         uses: ./containers/run_php_codesniffer
+      - if: ${{ always() }}
+        uses: ouzi-dev/commit-status-updater@v1.1.0
+        with:
+          status: "${{ job.status }}"
+
