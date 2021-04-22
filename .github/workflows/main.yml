@@ -25,4 +25,8 @@ jobs:
         uses: ouzi-dev/commit-status-updater@v1.1.0
         with:
           status: "${{ job.status }}"
+          url: "https://github.com/PHPOpenDocs/BlankProject/actions/runs/$GITHUB_RUN_ID"
+          description: "Github action status"
+
+
 
