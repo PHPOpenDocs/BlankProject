@@ -1,6 +1,7 @@
 {
     "name": "phpopendocs/blank-project",
-    "description": "A blank open docs project.",
+    "license": "CC-BY-NC-4.0",
+    "description": "A blank PHPOpenDoc project.",
     "type": "library",
     "authors": [
         {
@@ -8,6 +9,19 @@
             "email": "danack@basereality.com"
         }
     ],
+    "autoload": {
+        "psr-0": {
+            "Blank\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "BlankTest\\": "test/"
+        }
+    },
     "require": {},
     "require-dev": {
         "danack/coding-standard": "0.1.0",
